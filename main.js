@@ -6,7 +6,7 @@ const hi = console.log('hi');
 const clear = (e) => {
     const buttonId = e.target.id;
     if (buttonId === 'tempInput' || 'tempOutput'){
-        //clear something
+        
     }
 };
 
