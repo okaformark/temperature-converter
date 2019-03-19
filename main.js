@@ -3,13 +3,13 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
 };
 const hi = console.log('hi');
-const clear = (e) => {
-    const buttonId = e.target.id;
-    if (buttonId === 'tempInput' || 'tempOutput'){
-        
-    }
-};
 
+const clear = () => {
+    document.getElementById('tempInput').value='';
+};
+// const convert = () => {
+//     document.getElementById('tempOutput').value='';
+// };
 
 const buttonEvent = () => {
     document.getElementById('clearBtn').addEventListener('click', clear);
