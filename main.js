@@ -5,23 +5,24 @@ const printToDom = (divId, textToPrint) => {
 
 const clear = () => {
     document.getElementById('tempInput').value='';
-    document.getElementById('tempOutput').value='';
+    //document.getElementById('tempOutput').value='';
+    document.getElementById('displayTemp').textContent = '';
 };
 
 const domStringBuilder = (finalTemp, unit) =>
 {
     let domString = '';
     domString += `<div class = 'output'>`;
-        // if (temp_output >=32 || temp_output >=90){
-        //     domString +=    `<h1 class='red'> ${finalTemp}</h1> <h5>${unit}</h5>`;
-        // }
-        // else if (temp_output <=0 || temp_output <=32){
-        //     domString +=    `<h1 class='blue'> ${finalTemp}</h1> <h5>${unit}</h5>`;
-        // }
-        // else if (0 >= temp_input <= 32 || 32 >= temp_output <= 90){
-        //     domString +=    `<h1 class='green'> ${finalTemp}</h1> <h5>${unit}</h5>`;
-        // }
-    domString += `<h1> ${finalTemp}</h1> <h5>${unit}</h5>`;
+        if (temp_output >=32 && temp_output >=90){
+            domString +=    `<h1 class='red'> ${finalTemp}</h1> <h5>${unit}</h5>`;
+        }
+        else if (temp_output <=0 && temp_output <=32){
+            domString +=    `<h1 class='blue'> ${finalTemp}</h1> <h5>${unit}</h5>`;
+        }
+        else if (0 >= temp_output <= 32 && 32 >= temp_output <= 90){
+            domString +=    `<h1 class='green'> ${finalTemp}</h1> <h5>${unit}</h5>`;
+        }
+    //domString += `<h1> ${finalTemp}</h1> <h5>${unit}</h5>`;
     domString += `</div>`;
     // console.log(domString);
     printToDom('displayTemp', domString);
