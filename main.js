@@ -1,7 +1,7 @@
-const printToDom = (divId, textToPrint) => {
-    const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = textToPrint;
-};
+// const printToDom = (divId, textToPrint) => {
+//     const selectedDiv = document.getElementById(divId);
+//     selectedDiv.innerHTML = textToPrint;
+// };
 
 const clear = () => {
     document.getElementById('tempInput').value='';
@@ -22,18 +22,19 @@ const toFahrenheit = () =>{
     //console.log(fahrenheit);
 };
 
-const determineCoverter = () => {
-    
-
-    if (document.getElementById('celsuis').checked){
+const determineCoverter = (event) => {
+    console.log(event);
+    event.key = 'Enter';
+    if (document.getElementById('celsuis').checked) //|| event.key === 'Enter')
+    {
         toCelsuis();
     }
-    else  if (document.getElementById('fahrenheit').checked) {
+    else  if (document.getElementById('fahrenheit').checked) //|| event.key === 'Enter')
+    {
         toFahrenheit();
     }
-    
 };
-printToDom ('tempInput', determineCoverter());
+//printToDom ('tempInput', determineCoverter(event));
 
 
 
@@ -42,6 +43,7 @@ const buttonEvent = () => {
     document.getElementById('fahrenheit').checked = false;
     document.getElementById('convertBtn').addEventListener('click', determineCoverter);
     document.getElementById('clearBtn').addEventListener('click', clear);
+    document.addEventListener('keydown', determineCoverter);
 };
 
 const init =()=>{
