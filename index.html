@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Temperature-converter</title>
-    <link rel="stylesheet" type="text/css" href="./main.css">
-</head>
-<body>
-    <div class="container">
-    <input type="text" placeholder="Enter a value" id="tempInput" name="tempInput"></br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Temperature-converter</title>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" placeholder="Enter a value" id="tempInput" name="tempInput"></br>
 
-    <input type="radio" id="celsuis" name="tempUnit">C</input>
-    <input type="radio" id="fahrenheit" name="tempUnit">F</input></br></br>
+            <input type="radio" id="celsuis" name="tempUnit">C</input>
+            <input type="radio" id="fahrenheit" name="tempUnit">F</input></br></br>
 
-    <div id="clear-button">
-        <button id="clearBtn" value="clear">Clear</button>
-        <button id="convertBtn">Convert</button></br></br>
-    </div>
+            <div id="clear-button">
+                    
+                <button id="clearBtn" class="btn btn-primary" type="submit" value="clear">Clear</button>
+                <button id="convertBtn" class="btn btn-primary" type="submit" value="clear">Convert</button>
+            </div>
 
 <!-- <input type="text" id="tempOutput" name="tempOutput"> -->
-    <div id="displayTemp"></div>
-</div>
-    <script src="./main.js"></script>
-</body>
+            <div id="displayTemp"></div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
 </html>

@@ -8,6 +8,13 @@ body{
     align-items: center;
 }
 
+.container{
+    border-style: dotted;
+    padding: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .output h1, .output h5{
     display: inline;
 }
